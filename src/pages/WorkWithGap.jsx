@@ -2,12 +2,31 @@ import { useState } from 'react';
 
 export default function WorkWithGap() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real Netlify deployment with the "netlify" attribute on the form,
-    // this would submit via POST. For the UI demonstration, we'll just show success.
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    const formData = new FormData(e.target);
+    formData.append("access_key", "7b685c2a-b7cc-4578-bbb2-a2020f658395");
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -31,13 +50,9 @@ export default function WorkWithGap() {
       </div>
 
       <form 
-        name="work-with-gap" 
-        method="POST" 
-        data-netlify="true" 
         onSubmit={handleSubmit}
         className="glass-card p-8 md:p-12 rounded-xl space-y-8 border-t-4 border-t-momentum-gold"
       >
-        <input type="hidden" name="form-name" value="work-with-gap" />
         
         <div className="space-y-6">
           <h3 className="font-headline-lg text-xl text-momentum-gold border-b border-glass pb-2">Client Information</h3>
@@ -91,8 +106,12 @@ export default function WorkWithGap() {
           </div>
         </div>
 
-        <button type="submit" className="w-full bg-momentum-gold text-obsidian font-bold uppercase tracking-widest py-4 rounded hover:bg-white hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all">
-          Submit Request
+        <button 
+          type="submit" 
+          disabled={isSubmitting}
+          className="w-full bg-momentum-gold text-obsidian font-bold uppercase tracking-widest py-4 rounded hover:bg-white hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? "Submitting..." : "Submit Request"}
         </button>
       </form>
     </div>
