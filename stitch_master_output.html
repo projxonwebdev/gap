@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GAP - Where Leaders Advise Leaders</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "secondary-container": "#474746",
+                      "primary": "#f2ca50",
+                      "inverse-on-surface": "#313030",
+                      "on-primary-fixed-variant": "#574500",
+                      "charcoal": "#121212",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "background": "#131313",
+                      "on-tertiary-fixed": "#00174b",
+                      "momentum-gold": "#D4AF37",
+                      "momentum-gold-bright": "#FFD700",
+                      "on-secondary-fixed-variant": "#474746",
+                      "primary-fixed-dim": "#e9c349",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#735c00",
+                      "border-glass": "rgba(255, 255, 255, 0.12)",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-container": "#254188",
+                      "slate-gray": "#8E8E93",
+                      "surface-container-highest": "#353534",
+                      "surface-tint": "#e9c349",
+                      "primary-container": "#d4af37",
+                      "tertiary-fixed": "#dbe1ff",
+                      "on-secondary": "#313030",
+                      "surface-variant": "#353534",
+                      "surface-dim": "#131313",
+                      "obsidian": "#050505",
+                      "on-primary-fixed": "#241a00",
+                      "primary-fixed": "#ffe088",
+                      "outline": "#99907c",
+                      "error": "#ffb4ab",
+                      "surface-bright": "#3a3939",
+                      "on-background": "#e5e2e1",
+                      "tertiary": "#bfcdff",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary": "#082b72",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#b7b5b4",
+                      "on-primary": "#3c2f00",
+                      "surface-container": "#201f1f",
+                      "surface": "#131313",
+                      "on-surface-variant": "#d0c5af",
+                      "on-error-container": "#ffdad6",
+                      "outline-variant": "#4d4635",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "secondary": "#c8c6c5",
+                      "tertiary-container": "#97b0ff",
+                      "secondary-fixed": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "on-primary-container": "#554300"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Manrope"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background-color: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to right, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-on-surface font-body-md min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-charcoal/60 backdrop-blur-md fixed top-0 w-full z-50 border-b border-glass flat no shadows">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-momentum-gold-bright cursor-pointer active:opacity-80 transition-colors duration-300">GAP</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-momentum-gold font-bold border-b-2 border-momentum-gold pb-1 font-label-md text-label-md cursor-pointer active:opacity-80" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 font-label-md text-label-md cursor-pointer active:opacity-80" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 font-label-md text-label-md cursor-pointer active:opacity-80" href="#leadership">Leadership</a>
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 font-label-md text-label-md cursor-pointer active:opacity-80" href="#coaching">Coaching</a>
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 font-label-md text-label-md cursor-pointer active:opacity-80" href="#join">Join</a>
+</div>
+<button class="bg-momentum-gold text-obsidian px-6 py-3 rounded glow-button font-label-md text-label-md cursor-pointer active:opacity-80 transition-transform hover:scale-[1.02]">
+                Get Access
+            </button>
+</div>
+</nav>
+<!-- Content Canvas -->
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-section-gap">
+<!-- 1. Home / Hero Section -->
+<section class="relative min-h-[716px] flex flex-col justify-center items-start border-l-4 border-momentum-gold pl-gutter ml-4 md:ml-0" id="home">
+<div class="max-w-3xl space-y-8 z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                    Where Leaders <br/> <span class="text-gradient-gold">Advise Leaders</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    The Growth Advisory Program (GAP) is a strategic echelon designed exclusively for top-tier executives and high-growth entrepreneurs. We provide actionable intelligence, profound mentorship, and unparalleled networking within an environment of uncompromising excellence and confidentiality.
+                </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-momentum-gold text-obsidian px-8 py-4 rounded glow-button font-label-md text-label-md transition-transform hover:scale-[1.02]">
+                        Explore the Program
+                    </button>
+<button class="border border-momentum-gold text-momentum-gold px-8 py-4 rounded font-label-md text-label-md hover:bg-momentum-gold/10 transition-colors">
+                        View Alumni
+                    </button>
+</div>
+</div>
+<!-- Decorative background element -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 aspect-square rounded-full bg-momentum-gold/5 blur-[120px] -z-0 pointer-events-none"></div>
+</section>
+<!-- 2. Projects Section -->
+<section class="space-y-16" id="projects">
+<div class="space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-on-surface border-b border-glass pb-4">Strategic Engagements</h2>
+<p class="font-body-md text-body-md text-slate-gray max-w-2xl">High-impact initiatives driving growth across internal vectors, client deliverables, and external market positioning.</p>
+</div>
+<div class="space-y-12">
+<!-- Client Projects -->
+<div class="space-y-6">
+<h3 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-momentum-gold" style="font-variation-settings: 'FILL' 1;">work</span>
+                        Client Projects
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="glass-card p-6 rounded-lg border-t-2 border-t-momentum-gold transition-transform hover:-translate-y-1 duration-300">
+<div class="text-xs uppercase tracking-wider text-momentum-gold mb-2 font-label-md">Active</div>
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface mb-2">Project Alpha</h4>
+<p class="font-body-md text-body-md text-slate-gray mb-4 line-clamp-3">Comprehensive restructuring and market pivot strategy for a leading SaaS provider facing stagnant growth.</p>
+<div class="w-full h-1 bg-charcoal rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-momentum-gold to-momentum-gold-bright w-[75%]"></div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg transition-transform hover:-translate-y-1 duration-300">
+<div class="text-xs uppercase tracking-wider text-momentum-gold mb-2 font-label-md">Planning phase</div>
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface mb-2">Market Entry Strategy</h4>
+<p class="font-body-md text-body-md text-slate-gray mb-4 line-clamp-3">Expansion blueprint for APAC region, focusing on regulatory compliance and initial partnership formations.</p>
+<div class="w-full h-1 bg-charcoal rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-momentum-gold to-momentum-gold-bright w-[25%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Internal Projects -->
+<div class="space-y-6">
+<h3 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-momentum-gold" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+                        Internal Projects
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="glass-card p-6 rounded-lg transition-transform hover:-translate-y-1 duration-300">
+<div class="text-xs uppercase tracking-wider text-slate-gray mb-2 font-label-md">Completed</div>
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface mb-2">Framework V2</h4>
+<p class="font-body-md text-body-md text-slate-gray line-clamp-3">Overhaul of the proprietary GAP assessment framework to incorporate latest AI-driven metric analysis.</p>
+</div>
+</div>
+</div>
+<!-- External Projects -->
+<div class="space-y-6">
+<h3 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-momentum-gold" style="font-variation-settings: 'FILL' 1;">public</span>
+                        External Projects
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="glass-card p-6 rounded-lg transition-transform hover:-translate-y-1 duration-300">
+<div class="text-xs uppercase tracking-wider text-momentum-gold mb-2 font-label-md">Ongoing</div>
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface mb-2">Industry Think Tank</h4>
+<p class="font-body-md text-body-md text-slate-gray line-clamp-3">Quarterly whitepaper publication Series in collaboration with major business schools.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Current Team -->
+<section class="space-y-12" id="leadership">
+<div class="space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-on-surface border-b border-glass pb-4">Current Leadership</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Member 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] w-full mb-4 bg-charcoal rounded-lg overflow-hidden border border-glass relative">
+<div class="bg-cover bg-center w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100" data-alt="A high-end, dramatic black and white studio portrait of a confident male executive wearing a tailored dark suit. Sharp lighting, deep shadows, professional and intense gaze, modern minimalist aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDAenVPJ4C5TmoBROJ9bs0ESC0te-Sz3eLzZm5N0NLBOcpaGEuH9_0j5M7tE_yvHS91mC3tZfuuogRbzI9GEhXTKRrtF350cZaLEQeuwNJFL7oOiZv5tJg4Jw-Pz3Ho4hNTsYNhy1PZafxwhtF_dLDptSjc6ODkj6SQ9z83i-IDsNhpmoRmxthlXv5UnqIJMS52v99TcdyHKBK0F5vBZeUttaPlM2SQDkmZ4IyYS12-P_8D_DEAPeJxsCmr4Ncox8jtb7x4MEWAEU')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface">Example Person 1</h4>
+<p class="font-caption text-caption text-momentum-gold">Managing Partner</p>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] w-full mb-4 bg-charcoal rounded-lg overflow-hidden border border-glass relative">
+<div class="bg-cover bg-center w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100" data-alt="A sophisticated, high-contrast studio portrait of a female executive with a sleek bob haircut, wearing a minimalist black blazer. Soft but directional lighting highlighting her features against a dark background, evoking authority and intelligence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpsEO4VatqUEbgMOtVE0MFoKdFjrt6ATQgMucBklmJvELeCNlqu1dIUPPnHsBeiF6A7oquNwTeqpGqVlfUl_KPc9LqJZt_5oe_9Lt_Es7mfY1yOsnNhi-t6uunCozsgtj5UX4nXfN0SQbxK53jY_hzlPEbtKTOKDXpaqAHovddyCU59QVNlcaJkUfIxlqAXtjUIg7-ZD4XwiuI47qBHdyQ4iVhTLlGLvsqVU-6P2JqEmRC_VIm6HU_vl3aOvB359go9pJnoV0uR9w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface">Example Person 2</h4>
+<p class="font-caption text-caption text-momentum-gold">Director of Strategy</p>
+</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] w-full mb-4 bg-charcoal rounded-lg overflow-hidden border border-glass relative">
+<div class="bg-cover bg-center w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100" data-alt="A striking portrait of a male tech entrepreneur in his 40s, wearing a dark turtleneck. Lit with a subtle, moody rim light on a pitch-black background. High resolution, conveying deep focus and visionary thinking." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-FwEDhZ8SR4rgiYwWgry0jWPBHDH_1OBcT9kpNmPJB6vZG51sZbfcgI4_3zBdVSsf3X57DxASNFD8lifZSy628Gk5sZUiz1JVfWzaCHGaSy00UVNe-SGXcE369pCnb4AKvuyC5cXPekwE8g_XmFi6UmyE5RvI--nWexytiO3VKQyDC_zrOBR1PU_2rk4bqg_OIWB18EXrpJkmcQwBvp1O-JinNTxJvye0WGQhEipYW2OXnUlMNLfRXR6iOk6FKLYZ8ZXUS7esozw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface">Example Person 3</h4>
+<p class="font-caption text-caption text-momentum-gold">Venture Lead</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. GAP Graduate List -->
+<section class="space-y-12 bg-charcoal/30 p-8 md:p-12 rounded-xl border border-glass">
+<div class="flex justify-between items-end border-b border-glass pb-4">
+<div class="space-y-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Alumni Syndicate</h2>
+<p class="font-body-md text-body-md text-slate-gray">Graduates of the GAP program leading global initiatives.</p>
+</div>
+<button class="text-momentum-gold hover:text-momentum-gold-bright transition-colors text-sm uppercase tracking-wider font-semibold">View All Network</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Alumni 1 -->
+<div class="text-center group">
+<div class="w-20 h-20 mx-auto rounded-full bg-charcoal border border-glass mb-3 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-100 transition-opacity" data-alt="A close-up profile portrait of a confident executive smiling subtly, black and white, high-end editorial style, dark background, soft rim lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjjWpm4UBTyebOKItNkeo2_jGrfY2lWyHjmG1nKRLStsDjIMacVKJC-8HuMm4ndI7TwVU28KASF-LGUwGNJnvjbLKC19hH7Ebm0tfr65sd3n1NpXA60Cf6yHqONrzdfM0RRnjI8ABAajk5d0-Ja8d3EpM48kFYqie04X84Py0Tyet0wJtktoxHZkqqkuq-sIZGjJXzLfbKU-u9lLaAmWjwPkIVTPs9DIZyRiKXSOsF3I5dkcD5Y4YwcGk4bnpPEfIqTd9Tt6niW84')"></div>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface">Example Person 1</h5>
+<p class="text-xs text-slate-gray mt-1">Cohort '22</p>
+</div>
+<!-- Alumni 2 -->
+<div class="text-center group">
+<div class="w-20 h-20 mx-auto rounded-full bg-charcoal border border-glass mb-3 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:opacity-100 transition-opacity" data-alt="A close-up profile portrait of a serious female executive, black and white, high-end editorial style, dark background, dramatic side lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEoAPU59X8XPSwX7hXpfHCbCvQCRw34RK9JEeXkcPS7uNVRspx-lsHTg1VSlhlK2cjRB3H5Hyi7K_jBiQktHvJAxjb5imvo9Zeo2pvhQ_IgjdQHQ0hI_zZb2ucJ75qSUM3qjQlMyRK8rqx-6KXgtUXXNr9K6j5kd6eL6BUUOLJnYsBO3oFAjDoIgViHLmls7EtSz3zJnwV7FpkQkCrFLZhix5xcqBrc3oYamS36Pe-xQJLhe3ORH9kUAnnK2dKnohQQ8NNtTZ4Ag0')"></div>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface">Example Person 2</h5>
+<p class="text-xs text-slate-gray mt-1">Cohort '23</p>
+</div>
+<!-- Alumni 3 -->
+<div class="text-center group">
+<div class="w-20 h-20 mx-auto rounded-full bg-charcoal border border-glass mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-gray group-hover:text-momentum-gold transition-colors">person</span>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface">Example Person 3</h5>
+<p class="text-xs text-slate-gray mt-1">Cohort '23</p>
+</div>
+</div>
+</section>
+<!-- 5. Coaching -->
+<section class="space-y-12" id="coaching">
+<h2 class="font-headline-xl text-headline-xl text-on-surface border-b border-glass pb-4">Development Tracks</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- 1:1 Coaching -->
+<div class="glass-card p-10 rounded-xl flex flex-col justify-between h-full relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-momentum-gold">psychology</span>
+</div>
+<div class="space-y-6 z-10 relative">
+<h3 class="font-headline-lg text-headline-lg text-momentum-gold">1:1 Advisory</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Direct, hyper-focused coaching sessions with GAP managing partners. Designed to deconstruct complex executive challenges and build resilient mental models for high-stakes decision making.</p>
+<ul class="space-y-3 pt-4 border-t border-glass/50">
+<li class="flex items-center gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-sm text-momentum-gold">check_circle</span>
+                                Bi-weekly strategic reviews
+                            </li>
+<li class="flex items-center gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-sm text-momentum-gold">check_circle</span>
+                                Real-time crisis counsel access
+                            </li>
+</ul>
+</div>
+<div class="mt-12 z-10">
+<button class="border border-glass text-on-surface px-6 py-3 rounded font-label-md text-label-md hover:border-momentum-gold hover:text-momentum-gold transition-colors w-max">
+                            Request Advisory Slot
+                        </button>
+</div>
+</div>
+<!-- Growth Labs -->
+<div class="glass-card p-10 rounded-xl flex flex-col justify-between h-full relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-momentum-gold">trending_up</span>
+</div>
+<div class="space-y-6 z-10 relative">
+<h3 class="font-headline-lg text-headline-lg text-momentum-gold">Growth Labs</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Immersive, small-cohort sprints focusing on specific tactical domains. From M&amp;A integration to rapid scaling frameworks, these intensive labs forge actionable playbooks.</p>
+<ul class="space-y-3 pt-4 border-t border-glass/50">
+<li class="flex items-center gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-sm text-momentum-gold">check_circle</span>
+                                6-week intensive cohorts
+                            </li>
+<li class="flex items-center gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-sm text-momentum-gold">check_circle</span>
+                                Peer-reviewed strategic frameworks
+                            </li>
+</ul>
+</div>
+<div class="mt-12 z-10">
+<button class="border border-glass text-on-surface px-6 py-3 rounded font-label-md text-label-md hover:border-momentum-gold hover:text-momentum-gold transition-colors w-max">
+                            View Upcoming Labs
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6 & 7. Contact & Join Program (Combined layout for structural flow) -->
+<section class="pt-section-gap grid grid-cols-1 lg:grid-cols-12 gap-gutter border-t border-glass" id="join">
+<!-- Contact Info Sidebar -->
+<div class="lg:col-span-4 space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Engage with GAP</h2>
+<p class="font-body-md text-body-md text-slate-gray">For inquiries regarding admissions or media.</p>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="font-label-md text-label-md text-momentum-gold uppercase tracking-wider mb-2">Direct Channel</h4>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-momentum-gold transition-colors flex items-center gap-2" href="mailto:admissions@gap.example.com">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            admissions@gap.example.com
+                        </a>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-momentum-gold uppercase tracking-wider mb-2">Partnerships</h4>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-momentum-gold transition-colors flex items-center gap-2" href="mailto:partners@gap.example.com">
+<span class="material-symbols-outlined text-sm">handshake</span>
+                            partners@gap.example.com
+                        </a>
+</div>
+<div class="pt-6">
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded bg-charcoal border border-glass flex items-center justify-center text-slate-gray hover:text-momentum-gold hover:border-momentum-gold transition-all" href="#">
+<span>IN</span>
+</a>
+<a class="w-10 h-10 rounded bg-charcoal border border-glass flex items-center justify-center text-slate-gray hover:text-momentum-gold hover:border-momentum-gold transition-all" href="#">
+<span>TW</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Join Form Structure -->
+<div class="lg:col-span-8">
+<div class="glass-card p-8 md:p-12 rounded-xl">
+<div class="mb-10">
+<h3 class="font-headline-xl text-headline-xl text-on-surface mb-4">Request an Invitation</h3>
+<p class="font-body-md text-body-md text-slate-gray">Admission to GAP is strictly by review. Please provide initial context for your application.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-slate-gray block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-gray focus:ring-0 focus:border-momentum-gold text-on-surface px-0 py-2 transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-slate-gray block">Professional Email</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-gray focus:ring-0 focus:border-momentum-gold text-on-surface px-0 py-2 transition-colors" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-slate-gray block">Current Role &amp; Organization</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-gray focus:ring-0 focus:border-momentum-gold text-on-surface px-0 py-2 transition-colors" placeholder="CEO at TechCorp" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-slate-gray block">Primary Objective for Joining GAP</label>
+<textarea class="w-full bg-transparent border-0 border-b border-slate-gray focus:ring-0 focus:border-momentum-gold text-on-surface px-0 py-2 transition-colors resize-none" placeholder="Briefly describe your current strategic challenges..." rows="3"></textarea>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<p class="font-caption text-caption text-slate-gray max-w-xs">All information submitted is protected under our strict confidentiality protocols.</p>
+<button class="bg-momentum-gold text-obsidian px-8 py-4 rounded glow-button font-label-md text-label-md hover:bg-momentum-gold-bright transition-colors" type="button">
+                                Submit Request
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-obsidian w-full border-t border-glass flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center py-unit px-margin-desktop max-w-container-max mx-auto min-h-[80px]">
+<div class="font-headline-lg text-headline-lg text-momentum-gold mb-4 md:mb-0">GAP</div>
+<div class="font-caption text-caption text-slate-gray mb-4 md:mb-0">
+                © 2024 Growth Advisory Program. All rights reserved.
+            </div>
+<div class="flex gap-6">
+<a class="font-caption text-caption text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+<a class="font-caption text-caption text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">Privacy</a>
+<a class="font-caption text-caption text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

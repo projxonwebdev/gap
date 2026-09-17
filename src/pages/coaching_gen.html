@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coaching | GAP - Growth Advisory Program</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#2a2a2a",
+            "surface-container": "#201f1f",
+            "inverse-primary": "#735c00",
+            "inverse-on-surface": "#313030",
+            "surface-tint": "#e9c349",
+            "primary-container": "#d4af37",
+            "on-primary-container": "#554300",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#474746",
+            "error-container": "#93000a",
+            "secondary-container": "#474746",
+            "background": "#131313",
+            "surface-container-low": "#1c1b1b",
+            "on-primary-fixed": "#241a00",
+            "tertiary-fixed": "#dbe1ff",
+            "on-surface-variant": "#d0c5af",
+            "slate-gray": "#8E8E93",
+            "on-tertiary": "#082b72",
+            "surface-bright": "#3a3939",
+            "secondary": "#c8c6c5",
+            "tertiary": "#bfcdff",
+            "surface": "#131313",
+            "on-primary-fixed-variant": "#574500",
+            "on-background": "#e5e2e1",
+            "surface-container-lowest": "#0e0e0e",
+            "error": "#ffb4ab",
+            "primary-fixed": "#ffe088",
+            "tertiary-fixed-dim": "#b4c5ff",
+            "on-secondary-fixed": "#1c1b1b",
+            "inverse-surface": "#e5e2e1",
+            "on-surface": "#e5e2e1",
+            "outline": "#99907c",
+            "primary-fixed-dim": "#e9c349",
+            "on-secondary": "#313030",
+            "secondary-fixed": "#e5e2e1",
+            "momentum-gold-bright": "#FFD700",
+            "on-secondary-container": "#b7b5b4",
+            "charcoal": "#121212",
+            "surface-container-highest": "#353534",
+            "on-tertiary-container": "#254188",
+            "primary": "#f2ca50",
+            "outline-variant": "#4d4635",
+            "on-tertiary-fixed-variant": "#27438a",
+            "momentum-gold": "#D4AF37",
+            "surface-variant": "#353534",
+            "border-glass": "rgba(255, 255, 255, 0.12)",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-dim": "#131313",
+            "on-tertiary-fixed": "#00174b",
+            "on-primary": "#3c2f00",
+            "on-error": "#690005",
+            "obsidian": "#050505",
+            "tertiary-container": "#97b0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "8px",
+            "container-max": "1280px",
+            "gutter": "24px",
+            "section-gap": "120px",
+            "margin-mobile": "20px",
+            "margin-desktop": "64px"
+          },
+          "fontFamily": {
+            "display-lg": ["Manrope"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "body-md": ["Inter"],
+            "label-md": ["Inter"],
+            "display-lg-mobile": ["Manrope"],
+            "caption": ["Inter"]
+          },
+          "fontSize": {
+            "display-lg": [
+              "64px",
+              {
+                "lineHeight": "72px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "800"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-xl": [
+              "40px",
+              {
+                "lineHeight": "48px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-md": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.05em",
+                "fontWeight": "600"
+              }
+            ],
+            "display-lg-mobile": [
+              "40px",
+              {
+                "lineHeight": "48px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "800"
+              }
+            ],
+            "caption": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-obsidian text-on-background antialiased selection:bg-momentum-gold selection:text-obsidian min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Subtle Ambient Atmospheric Glow Backgrounds -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute -top-48 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-momentum-gold/5 blur-[140px] rounded-full"></div>
+<div class="absolute top-[45%] right-0 w-[500px] h-[500px] bg-momentum-gold/5 blur-[160px] rounded-full"></div>
+<div class="absolute bottom-10 left-0 w-[600px] h-[600px] bg-surface-container-high/30 blur-[180px] rounded-full"></div>
+</div>
+<!-- Shared Component: TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-charcoal/60 backdrop-blur-md border-b border-glass">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-lg text-headline-lg font-bold text-momentum-gold-bright tracking-tight cursor-pointer active:opacity-80" href="#">
+        GAP
+      </a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8 font-label-md text-label-md">
+<!-- Home -->
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80" href="#">
+          Home
+        </a>
+<!-- Projects -->
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80" href="#">
+          Projects
+        </a>
+<!-- Leadership -->
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80" href="#">
+          Leadership
+        </a>
+<!-- Coaching (ACTIVE STATE) -->
+<a class="text-momentum-gold font-bold border-b-2 border-momentum-gold pb-1 hover:text-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80" href="#">
+          Coaching
+        </a>
+<!-- Join -->
+<a class="text-on-surface-variant hover:text-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80" href="#">
+          Join
+        </a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<a class="inline-flex items-center justify-center font-label-md text-label-md bg-momentum-gold text-obsidian px-5 py-2.5 rounded-lg font-bold tracking-wide hover:bg-momentum-gold-bright transition-colors duration-300 cursor-pointer active:opacity-80 shadow-[0_0_20px_rgba(212,175,55,0.2)]" href="#">
+          Get Access
+        </a>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="relative z-10 flex-grow pt-32 md:pt-40">
+<!-- Hero / Page Title Area -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-12 pb-20 md:pb-28">
+<div class="max-w-4xl text-left">
+<!-- Gold Kicker -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-glass mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-momentum-gold animate-pulse"></span>
+<span class="font-label-md text-caption uppercase text-momentum-gold tracking-widest font-semibold">
+            EXECUTIVE COACHING &amp; ADVISORY
+          </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight mb-8">
+          Engineered for <span class="text-transparent bg-clip-text bg-gradient-to-r from-momentum-gold-bright via-primary-fixed to-momentum-gold">Exponential Leadership.</span>
+</h1>
+<!-- Intro text -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed border-l-2 border-momentum-gold/40 pl-6">
+          High-conviction advisory and disciplined frameworks for executives operating at the frontier of scale.
+        </p>
+</div>
+</section>
+<!-- Section 1: The GAP Methodology -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<!-- Section Header -->
+<div class="mb-16">
+<div class="font-label-md text-caption uppercase text-momentum-gold tracking-widest mb-3 font-semibold">
+          SYSTEM ARCHITECTURE
+        </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-3 tracking-tight">
+          The GAP Methodology
+        </h2>
+<p class="font-body-lg text-body-lg text-slate-gray">
+          A systematic approach to breaking plateaus.
+        </p>
+</div>
+<!-- Connected 3-Step Grid / Timeline -->
+<div class="relative">
+<!-- Subtle Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-momentum-gold/25 to-transparent -translate-y-8 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter relative z-10">
+<!-- Step 01 -->
+<div class="group relative flex flex-col justify-between p-8 bg-charcoal/70 backdrop-blur-md rounded-xl border border-glass hover:border-momentum-gold/40 transition-all duration-300">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-momentum-gold/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-display-lg text-headline-xl font-extrabold text-momentum-gold tracking-tight">01</span>
+<span class="w-2 h-2 rounded-full bg-momentum-gold/40 group-hover:bg-momentum-gold transition-colors"></span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 group-hover:text-momentum-gold-bright transition-colors">
+                Audit &amp; Diagnose
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                We strip away vanity metrics to find the true bottlenecks in your organization.
+              </p>
+</div>
+<div class="mt-8 pt-6 border-t border-glass/40 flex items-center justify-between text-caption font-caption text-slate-gray">
+<span>PHASE I</span>
+<span class="text-momentum-gold">DISCOVERY &amp; REVEAL</span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="group relative flex flex-col justify-between p-8 bg-charcoal/70 backdrop-blur-md rounded-xl border border-glass hover:border-momentum-gold/40 transition-all duration-300">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-momentum-gold/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-display-lg text-headline-xl font-extrabold text-momentum-gold tracking-tight">02</span>
+<span class="w-2 h-2 rounded-full bg-momentum-gold/40 group-hover:bg-momentum-gold transition-colors"></span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 group-hover:text-momentum-gold-bright transition-colors">
+                Strategic Re-Alignment
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Crafting a high-conviction roadmap with input from domain-expert advisors.
+              </p>
+</div>
+<div class="mt-8 pt-6 border-t border-glass/40 flex items-center justify-between text-caption font-caption text-slate-gray">
+<span>PHASE II</span>
+<span class="text-momentum-gold">CALIBRATION &amp; DESIGN</span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="group relative flex flex-col justify-between p-8 bg-charcoal/70 backdrop-blur-md rounded-xl border border-glass hover:border-momentum-gold/40 transition-all duration-300">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-momentum-gold/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="font-display-lg text-headline-xl font-extrabold text-momentum-gold tracking-tight">03</span>
+<span class="w-2 h-2 rounded-full bg-momentum-gold/40 group-hover:bg-momentum-gold transition-colors"></span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 group-hover:text-momentum-gold-bright transition-colors">
+                Ruthless Execution
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Continuous accountability loops to ensure strategy translates to compound growth.
+              </p>
+</div>
+<div class="mt-8 pt-6 border-t border-glass/40 flex items-center justify-between text-caption font-caption text-slate-gray">
+<span>PHASE III</span>
+<span class="text-momentum-gold">COMPOUND IMPACT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Development Tracks -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<!-- Section Header -->
+<div class="max-w-3xl mb-16">
+<div class="font-label-md text-caption uppercase text-momentum-gold tracking-widest mb-3 font-semibold">
+          PILLARS OF ENGAGEMENT
+        </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-4 tracking-tight">
+          Development Tracks
+        </h2>
+<p class="font-body-lg text-body-lg text-slate-gray leading-relaxed">
+          Our methodology is broken into distinct pillars designed to address organizational challenges at any altitude.
+        </p>
+</div>
+<!-- Tracks Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Track 1: 1:1 Advisory -->
+<div class="relative bg-charcoal/80 backdrop-blur-md rounded-xl p-8 md:p-12 border border-glass hover:border-momentum-gold/30 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="absolute top-0 right-0 w-36 h-36 bg-momentum-gold/5 blur-[50px] rounded-full pointer-events-none"></div>
+<div>
+<!-- Icon Badge & Meta -->
+<div class="flex items-center justify-between mb-8">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high border border-glass flex items-center justify-center text-momentum-gold">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology">psychology</span>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container border border-glass text-caption font-caption text-momentum-gold uppercase tracking-wider font-semibold">
+                Direct Principal Access
+              </span>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+              1:1 Advisory
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+              Direct, hyper-focused coaching sessions with GAP managing partners. Designed to deconstruct complex executive challenges and build resilient mental models for high-stakes decision making.
+            </p>
+<!-- Key Points -->
+<div class="space-y-6 pt-6 border-t border-glass">
+<div class="flex items-start gap-4">
+<div class="mt-1 flex-shrink-0 text-momentum-gold">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold mb-1">
+                    Bi-weekly strategic reviews
+                  </h4>
+<p class="font-body-md text-body-md text-slate-gray">
+                    Deep dives into current operational bottlenecks.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 flex-shrink-0 text-momentum-gold">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold mb-1">
+                    Crisis Counsel Access
+                  </h4>
+<p class="font-body-md text-body-md text-slate-gray">
+                    Real-time support for critical, time-sensitive decisions.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-glass/40 flex items-center justify-between font-caption text-caption text-slate-gray">
+<span>FORMAT: PRIVATE CADENCE</span>
+<span class="text-momentum-gold font-semibold">INVITATION ONLY</span>
+</div>
+</div>
+<!-- Track 2: Growth Labs -->
+<div class="relative bg-charcoal/80 backdrop-blur-md rounded-xl p-8 md:p-12 border border-glass hover:border-momentum-gold/30 transition-all duration-300 flex flex-col justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="absolute top-0 right-0 w-36 h-36 bg-momentum-gold/5 blur-[50px] rounded-full pointer-events-none"></div>
+<div>
+<!-- Icon Badge & Meta -->
+<div class="flex items-center justify-between mb-8">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high border border-glass flex items-center justify-center text-momentum-gold">
+<span class="material-symbols-outlined text-3xl" data-icon="hub">hub</span>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container border border-glass text-caption font-caption text-momentum-gold uppercase tracking-wider font-semibold">
+                Cohort Dynamic
+              </span>
+</div>
+<!-- Title & Description -->
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+              Growth Labs
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+              Immersive, small-cohort sprints focusing on specific tactical domains. From M&amp;A integration to rapid scaling frameworks, these intensive labs forge actionable playbooks.
+            </p>
+<!-- Key Points -->
+<div class="space-y-6 pt-6 border-t border-glass">
+<div class="flex items-start gap-4">
+<div class="mt-1 flex-shrink-0 text-momentum-gold">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold mb-1">
+                    6-Week Intensive Cohorts
+                  </h4>
+<p class="font-body-md text-body-md text-slate-gray">
+                    Focused curriculum alongside 5-8 peer executives.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 flex-shrink-0 text-momentum-gold">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold mb-1">
+                    Peer-Reviewed Frameworks
+                  </h4>
+<p class="font-body-md text-body-md text-slate-gray">
+                    Defend your strategy in a room of equals.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-glass/40 flex items-center justify-between font-caption text-caption text-slate-gray">
+<span>FORMAT: SYNCHRONOUS LABS</span>
+<span class="text-momentum-gold font-semibold">LIMITED SEATS</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="w-full bg-obsidian border-t border-glass relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center py-unit px-margin-desktop max-w-container-max mx-auto py-8">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+<span class="font-headline-lg text-headline-lg text-momentum-gold font-bold">
+          GAP
+        </span>
+<p class="font-caption text-caption text-slate-gray">
+          © 2024 Growth Advisory Program. All rights reserved.
+        </p>
+</div>
+<!-- Links -->
+<div class="flex items-center space-x-6 mt-4 md:mt-0 font-caption text-caption">
+<a class="text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">
+          Contact
+        </a>
+<a class="text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">
+          Privacy
+        </a>
+<a class="text-slate-gray hover:text-momentum-gold transition-colors duration-200 cursor-pointer" href="#">
+          Terms
+        </a>
+</div>
+</div>
+</footer>
+</body></html>

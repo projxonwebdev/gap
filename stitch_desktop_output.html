@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GAP - Growth Advisory Program</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#000000",
+                        "on-surface": "#e2e2e2",
+                        "on-tertiary": "#1b1b1b",
+                        "on-secondary-container": "#e2e2e2",
+                        "on-background": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#474747",
+                        "surface-container": "#1f1f1f",
+                        "inverse-on-surface": "#303030",
+                        "surface": "#131313",
+                        "surface-tint": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "secondary-fixed-dim": "#ababab",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#474747",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "primary-fixed": "#5e5e5e",
+                        "background": "#131313",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-secondary": "#1b1b1b",
+                        "surface-container-highest": "#353535",
+                        "on-surface-variant": "#c6c6c6",
+                        "surface-variant": "#353535",
+                        "outline": "#919191",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c6c6c6",
+                        "error": "#ffb4ab",
+                        "primary-container": "#d4d4d4",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#c6c6c6",
+                        "surface-container-low": "#1b1b1b",
+                        "tertiary-fixed-dim": "#474747",
+                        "tertiary-fixed": "#5e5e5e",
+                        "primary-fixed-dim": "#474747",
+                        "tertiary": "#e2e2e2",
+                        "inverse-primary": "#5e5e5e",
+                        "tertiary-container": "#919191",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "on-primary": "#1b1b1b",
+                        "on-tertiary-container": "#000000",
+                        "on-primary-fixed": "#ffffff",
+                        "surface-dim": "#131313",
+                        "obsidian": "#0A0A0A",
+                        "momentum-gold": "#FFC800",
+                        "glass": "rgba(255,255,255,0.05)",
+                        "charcoal": "#1A1A1A",
+                        "slate-gray": "#888888"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "2rem",
+                        "section-gap": "8rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    "maxWidth": {
+                        "container-max": "1440px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .text-momentum-gold { color: theme('colors.momentum-gold'); }
+        .bg-momentum-gold { background-color: theme('colors.momentum-gold'); }
+        .border-momentum-gold { border-color: theme('colors.momentum-gold'); }
+        
+        .glass-panel {
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-momentum-gold selection:text-black">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-obsidian/60 backdrop-blur-md border-b border-glass">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-on-surface hover:text-momentum-gold transition-colors hover:bg-white/5 transition-all duration-300 p-2 rounded-DEFAULT flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-display-lg text-headline-lg font-extrabold tracking-tighter text-momentum-gold text-2xl">GAP</div>
+</div>
+<nav class="hidden md:flex gap-8 items-center font-label-md text-label-md text-sm tracking-wider">
+<a class="text-on-surface hover:text-momentum-gold transition-colors hover:bg-white/5 px-3 py-2 rounded-DEFAULT" href="#overview">Overview</a>
+<a class="text-on-surface hover:text-momentum-gold transition-colors hover:bg-white/5 px-3 py-2 rounded-DEFAULT" href="#projects">Projects</a>
+<a class="text-on-surface hover:text-momentum-gold transition-colors hover:bg-white/5 px-3 py-2 rounded-DEFAULT" href="#leadership">Leadership</a>
+<a class="text-on-surface hover:text-momentum-gold transition-colors hover:bg-white/5 px-3 py-2 rounded-DEFAULT" href="#methodology">Methodology</a>
+</nav>
+<button class="bg-momentum-gold text-black font-label-md text-label-md font-bold px-6 py-2.5 rounded-DEFAULT hover:opacity-90 transition-all duration-300 transform active:scale-95 text-xs tracking-widest">
+                JOIN PROGRAM
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40" data-alt="A sophisticated, abstract dark mode background representing strategic business growth. Subtle intersecting geometric lines and nodes glowing faintly in gold against deep obsidian and charcoal tones, suggesting networks, executive leadership, and high-end corporate strategy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJiUqDG3KwPr5jhz_0sSrmkuSiuQMqzAIjyMIn0tJ8tv8xIu8o5V2hJxdijz9O6vY9Q2kcUJAK0TKhOUWB5kGKqIGVBnndMuK5k5U1tqBHD0N8MOsni50k5rGOgxEQ3baP-5PvC4ysjennUeJ2fNDoM3Pljd-TA5jqzL2-WO6O30DbQSqnAJmGKCRt_gO5WlbAmOXfxl5tFhTvGWNBTewFEsp8mtdwT56fLcUctRKRUMXKMTeJ5EuRFrt6Mk9fi5xbzsBbkQa5Nz4')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-margin-desktop max-w-4xl mx-auto flex flex-col items-center gap-8">
+<div class="inline-block border border-outline-variant/50 px-4 py-1.5 rounded-full text-xs font-label-md tracking-widest text-secondary mb-4 uppercase">
+                    Growth Advisory Program
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-primary leading-tight">
+                    Where Leaders <br/> <span class="text-momentum-gold italic pr-4">Advise</span> Leaders
+                </h1>
+<p class="text-lg md:text-xl font-body text-secondary max-w-2xl font-light">
+                    An exclusive echelon for visionary executives to accelerate strategic initiatives, refine leadership acumen, and drive compounding organizational growth.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<button class="bg-momentum-gold text-black font-bold px-8 py-4 rounded-DEFAULT hover:opacity-90 transition-all duration-300 text-sm tracking-wider">
+                        APPLY FOR ADMISSION
+                    </button>
+<button class="glass-panel text-on-surface font-medium px-8 py-4 rounded-DEFAULT hover:bg-white/10 transition-all duration-300 text-sm tracking-wider flex items-center gap-2">
+                        EXPLORE PROGRAM
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-section-gap px-margin-desktop relative" id="overview">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A highly professional, cinematic shot of a modern, minimalist executive boardroom in a high-rise. Dark wood table, leather chairs, and subtle ambient lighting in deep greys and warm golds. It conveys an atmosphere of high-stakes strategy, exclusivity, and premium corporate advisory." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK6N6R6dhnc7FPMDD5IuO-5AQA4cFBmAPa-wLQpCHyElYwsCn9nqabYmCyZk58HKZasG0TcudBDGjfYyUfmOAJTmkLaaTIS85ND6Q_GP_xmhBOZEF0RWrPis-fEeD4SKM0_dfycY3j9zSYIWEFAUqAvfFJ5qV-Vqu7z1q5GjDlI-p8_m0klRAoaQi5_Vyz36rZe4hRbm5OeqW_W6MhZLXt6Q-Y8yryMjmjbSb14LfBwwRF2vJPHQ6fnNZplgcfWKufuX-f4H9-VjE')"></div>
+<div class="absolute inset-0 border border-glass rounded-xl mix-blend-overlay pointer-events-none"></div>
+</div>
+<div class="absolute -bottom-8 -right-8 glass-panel p-6 rounded-lg w-64 hidden md:block">
+<div class="text-4xl font-light text-momentum-gold mb-2">94%</div>
+<div class="text-xs text-secondary tracking-widest uppercase">Executive Acceleration</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-8">
+<div>
+<h2 class="text-sm font-label-md tracking-[0.2em] text-momentum-gold uppercase mb-4">Program Overview</h2>
+<h3 class="text-3xl md:text-5xl font-bold font-headline text-primary leading-tight">
+                                The catalyst for the next echelon of growth.
+                            </h3>
+</div>
+<p class="text-on-surface-variant font-body text-lg font-light leading-relaxed">
+                            The Growth Advisory Program is not standard consulting. It is a rigorously curated ecosystem where proven industry leaders engage with high-potential executives. We don't just provide playbooks; we engineer strategic clarity through direct, high-level advisory.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-momentum-gold">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<h4 class="text-primary font-bold text-lg">Strategic Clarity</h4>
+<p class="text-sm text-secondary font-light">Distill complex market dynamics into actionable executive mandates.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-momentum-gold">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<h4 class="text-primary font-bold text-lg">Exclusive Network</h4>
+<p class="text-sm text-secondary font-light">Access a private syndicate of alumni and active industry titans.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-obsidian border-t border-charcoal">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-display-lg text-headline-lg text-momentum-gold text-3xl font-extrabold tracking-tighter">
+                GAP
+            </div>
+<div class="flex flex-wrap justify-center gap-6 font-label-md text-label-md text-sm">
+<a class="text-slate-gray hover:text-on-surface transition-colors hover:text-momentum-gold transition-all duration-200" href="#">Contact</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors hover:text-momentum-gold transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-slate-gray hover:text-on-surface transition-colors hover:text-momentum-gold transition-all duration-200" href="#">Terms of Service</a>
+</div>
+<div class="text-slate-gray font-body-md text-body-md text-xs">
+                © 2024 Growth Advisory Program. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>
