@@ -11,16 +11,25 @@ export default function WorkWithGap() {
     const formData = new FormData(e.target);
     formData.append("access_key", "7b685c2a-b7cc-4578-bbb2-a2020f658395");
     
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: json
       });
       
-      if (response.ok) {
+      const data = await response.json();
+      
+      if (data.success) {
         setSubmitted(true);
       } else {
-        alert("Something went wrong. Please try again.");
+        alert("Form Error: " + (data.message || "Something went wrong."));
       }
     } catch (error) {
       alert("Network error. Please try again.");
