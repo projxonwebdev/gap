@@ -9,7 +9,11 @@ export default function WorkWithGap() {
     setIsSubmitting(true);
     
     const formData = new FormData(e.target);
-    formData.append("access_key", "7b685c2a-b7cc-4578-bbb2-a2020f658395");
+    const companyName = formData.get("company") || "a Client";
+    
+    formData.append("access_key", "c97e1c09-5742-44fd-89a2-fdfb4c992499");
+    formData.append("subject", `New GAP Advisory Request from ${companyName}`);
+    formData.append("from_name", "GAP Website Portal");
     
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
